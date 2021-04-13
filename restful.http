@@ -1,0 +1,30 @@
+@BASE_URL = http://localhost:3000/api
+
+GET {{BASE_URL}}/users
+
+###
+GET {{BASE_URL}}/users/2
+###
+POST {{BASE_URL}}/users
+Content-Type: application/json
+
+{
+    "fullName":"muratozgoren",
+    "userName":"murat",
+    "email":"muratozgoren@icloud.com",
+    "pass":"123456"
+}
+
+###
+PATCH  {{BASE_URL}}/users/111
+Content-Type: application/json
+
+{
+    "name":"murat22",
+    "age":27,
+    "userName":"muratozgoren22"
+}
+
+###
+DELETE  {{BASE_URL}}/users/111
+Content-Type: application/json
